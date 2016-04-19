@@ -1,0 +1,27 @@
+
+    // ラムダ式＝関数型インタフェースに限定
+    // 実装すべきメソッドが１つであるインタフェース
+
+    // java.util.Function
+    // Function<T, R> ... R apply(T t) ... 引数うけとって返り値があるメソッドを定義
+    //    IntFunction
+    // Consumer<T> ... void accept(T t) ... 引数はあるが返り値がvoidであるメソッドを定義
+    //    DoubleConsumer
+    // Supplier<T> ... T get() ... 引数がなく返り値があるメソッドを定義
+    // Predicate<T> ... boolean test(T t) ... 引数とbooleanの返り値があるメソッドを定義
+
+    // BiFunction<T, U, R> ... R apply(T t, U u)
+    // BiConsumer<T, U> ... void accept(T t, U u)
+
+    // Function
+    //   |- UnaryOperator<T> -> Function<T, T> ... T apply(T t) ... 同じ型の引数と返り値
+
+    // BiFunction
+    //   |- BinaryOperator<T> -> BiFunction<T, T, T> ... T apply(T t1, T t2) ... 同じ型の引数２つと返り値
+
+    // 外部イテレータ　・・・拡張for文のように、コレクションの外部でイテレーションを制御
+    // 内部イテレータ　・・・Iteratable#forEachのように、コレクション内でイテレーションを制御
+
+    // ストリームは、イテレーションの結果を集約して値を返す
+    // ストリームは、リストなどと異なり、、自ら要素を保持しない
+    // ストリームの対象となるリストや配列のことを、ソースと呼ぶ
